@@ -1,0 +1,111 @@
+:root {
+  --main-color: #4866de;
+  --second-color: #000000;
+  --light-color: white;
+}
+
+html {
+  scrollbar-color: var(--second-color) var(--main-color);
+  background: linear-gradient(#e7ebf5, #e1e3f0);
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.button-container {
+  display: grid;
+  font-size: 14px;
+  justify-items: center;
+  align-content: center;
+  width: 120px;
+  height: 110px;
+  background: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px #0000001A;
+  cursor: pointer;
+  position: relative;
+}
+
+.button-icon {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.button-text {
+  position: absolute;
+  margin-top: 75px;
+}
+
+#Achromatopsia {
+  color: gray;
+  fill: gray;
+}
+
+#Deuteranopia {
+  color: green;
+  fill: green;
+}
+
+#Protanopia {
+  color: red;
+  fill: red;
+}
+
+#Tritanopia {
+  color: blue;
+  fill: blue;
+}
+
+#Astigmatism .button-icon {
+  filter: blur(0.5px) drop-shadow(3px 0px 1px rgba(0, 0, 0, 0.5));
+  transform: skewX(3deg);
+}
+
+.icon {
+  position: absolute;
+  top: 20%;
+}
+
+#Hyperopia .icon.normal {
+  clip-path: inset(0 0 50% 0);
+}
+
+#Hyperopia .icon.blurred {
+  filter: blur(2px);
+  clip-path: inset(45% 0 0 0);
+  border-radius: 5px;
+}
+
+#Myopia .icon.normal {
+  clip-path: inset(50% 0 0 0);
+}
+
+#Myopia .icon.blurred {
+  filter: blur(2px);
+  clip-path: inset(0 0 40% 0);
+  border-radius: 5px;
+}
+
+.upload-icon {
+  width: 20px;
+}

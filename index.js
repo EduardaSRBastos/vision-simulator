@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("year").textContent = new Date().getFullYear();
 });
 
+// Buttons content logic
 const visionTypes = [
   {
     name: "Cat",
@@ -80,6 +81,7 @@ visionTypes.forEach(({ name, viewWidth, icon }) => {
   buttonsContainer.appendChild(div);
 });
 
+// Image slider logic
 const slider = document.querySelector(".slider");
 const leftArrow = document.querySelector(".arrow.left");
 const rightArrow = document.querySelector(".arrow.right");
@@ -90,13 +92,13 @@ function updateArrowPosition() {
   const max = +slider.max || 100;
 
   const sliderWidth = slider.offsetWidth;
-  const thumbWidth = 5;
+  const thumbWidth = 7;
   const trackWidth = sliderWidth - thumbWidth;
 
   const percent = (value - min) / (max - min);
   const offsetX = percent * trackWidth + thumbWidth / 2;
 
-  leftArrow.style.left = `${offsetX - leftArrow.offsetWidth - 13}px`;
+  leftArrow.style.left = `${offsetX - leftArrow.offsetWidth - 15}px`;
   rightArrow.style.left = `${offsetX + 15}px`;
 }
 
@@ -107,3 +109,54 @@ window.addEventListener("load", () => {
 
 slider.addEventListener("input", updateArrowPosition);
 window.addEventListener("resize", updateArrowPosition);
+
+// Buttons click logic
+const imageText = document.querySelector(".image-text");
+
+buttonsContainer.addEventListener("click", (e) => {
+  let button = e.target.closest(".button-container");
+  if (!button) return;
+
+  const buttonText = button.querySelector(".button-text").textContent;
+  imageText.textContent = buttonText;
+
+  buttonsContainer.querySelectorAll(".button-container").forEach((btn) => {
+    btn.classList.remove("selected");
+  });
+
+  button.classList.add("selected");
+});
+
+document.getElementById("Cat").classList.add("selected");
+
+// Image upload logic
+const fileInput = document.getElementById("fileInput");
+const fileLabel = document.querySelector(".upload-placeholder");
+const comparisonImage = document.querySelector(".comparison-wrapper img");
+const allowedExtensions = ["png", "jpg", "jpeg"];
+
+let oldImageUrl = null;
+
+fileInput.addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const fileName = file.name;
+  const extension = fileName.split(".").pop().toLowerCase();
+
+  if (!allowedExtensions.includes(extension)) {
+    alert("Please upload a .png, .jpg, or .jpeg file.");
+    fileInput.value = "";
+    fileLabel.textContent = "Upload an Image";
+    return;
+  }
+
+  fileLabel.textContent = fileName;
+
+  if (oldImageUrl) {
+    URL.revokeObjectURL(oldImageUrl);
+  }
+
+  oldImageUrl = URL.createObjectURL(file);
+  comparisonImage.src = oldImageUrl;
+});

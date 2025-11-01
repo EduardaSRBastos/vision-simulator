@@ -85,6 +85,7 @@ visionTypes.forEach(({ name, viewWidth, icon }) => {
 const slider = document.querySelector(".slider");
 const leftArrow = document.querySelector(".arrow.left");
 const rightArrow = document.querySelector(".arrow.right");
+const filteredLayer = document.querySelector(".image-layer.filtered");
 
 function updateArrowPosition() {
   const value = +slider.value;
@@ -102,13 +103,16 @@ function updateArrowPosition() {
   rightArrow.style.left = `${offsetX + 15}px`;
 }
 
-window.addEventListener("load", () => {
-  slider.value = 50;
+function updateEffectDivision() {
+  const percent = +slider.value;
+  const rightInset = 100 - percent;
+  filteredLayer.style.clipPath = `inset(0 ${rightInset}% 0 0)`;
   updateArrowPosition();
-});
+}
 
-slider.addEventListener("input", updateArrowPosition);
-window.addEventListener("resize", updateArrowPosition);
+slider.addEventListener("input", updateEffectDivision);
+window.addEventListener("resize", updateEffectDivision);
+window.addEventListener("load", updateEffectDivision);
 
 // Buttons click logic
 const imageText = document.querySelector(".image-text");
@@ -125,6 +129,53 @@ buttonsContainer.addEventListener("click", (e) => {
   });
 
   button.classList.add("selected");
+
+  filteredLayer.style.filter = "none";
+  filteredLayer.style.transform = "none";
+  filteredLayer.style.mixBlendMode = "normal";
+  filteredLayer.style.maskImage = "none";
+  filteredLayer.style.webkitMaskImage = "none";
+
+  switch (buttonText) {
+    case "Cat":
+      filteredLayer.style.filter =
+        "brightness(0.8) contrast(0.75) saturate(0.4) hue-rotate(15deg) sepia(0.3) blur(1px)";
+      break;
+    case "Dog":
+      filteredLayer.style.filter =
+        "brightness(0.9) contrast(0.82) saturate(0.45) sepia(0.4) hue-rotate(45deg) blur(1.2px)";
+      break;
+    case "Achromatopsia":
+      filteredLayer.style.filter = "url(#achromatopsia)";
+      break;
+    case "Deuteranopia":
+      filteredLayer.style.filter = "url(#deuteranopia)";
+      break;
+    case "Protanopia":
+      filteredLayer.style.filter = "url(#protanopia)";
+      break;
+    case "Tritanopia":
+      filteredLayer.style.filter = "url(#tritanopia)";
+      break;
+    case "Astigmatism":
+      filteredLayer.style.filter = "blur(2px) contrast(1.1) saturate(0.9)";
+      filteredLayer.style.transform = "skewX(1.5deg) scaleX(1.02)";
+      filteredLayer.style.mixBlendMode = "overlay";
+      break;
+    case "Hyperopia":
+      filteredLayer.style.filter = "blur(15px) brightness(1.05)";
+      filteredLayer.style.maskImage =
+        "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%)";
+      break;
+    case "Myopia":
+      filteredLayer.style.filter = "blur(15px) brightness(0.95)";
+      filteredLayer.style.maskImage =
+        "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%)";
+      break;
+
+    default:
+      filteredLayer.style.filter = "none";
+  }
 });
 
 document.getElementById("Cat").classList.add("selected");
@@ -132,10 +183,10 @@ document.getElementById("Cat").classList.add("selected");
 // Image upload logic
 const fileInput = document.getElementById("fileInput");
 const fileLabel = document.querySelector(".upload-placeholder");
-const comparisonImage = document.querySelector(".comparison-wrapper img");
+const comparisonImage = document.querySelectorAll(".comparison-wrapper img");
 const allowedExtensions = ["png", "jpg", "jpeg"];
 
-let oldImageUrl = null;
+let imageUrl = null;
 
 fileInput.addEventListener("change", (event) => {
   const file = event.target.files[0];
@@ -153,10 +204,10 @@ fileInput.addEventListener("change", (event) => {
 
   fileLabel.textContent = fileName;
 
-  if (oldImageUrl) {
-    URL.revokeObjectURL(oldImageUrl);
+  if (imageUrl) {
+    URL.revokeObjectURL(imageUrl);
   }
 
-  oldImageUrl = URL.createObjectURL(file);
-  comparisonImage.src = oldImageUrl;
+  imageUrl = URL.createObjectURL(file);
+  comparisonImage.forEach((img) => (img.src = imageUrl));
 });

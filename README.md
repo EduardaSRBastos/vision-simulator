@@ -46,9 +46,9 @@
 ## PageSpeed Insights Performance Score
 <div align="center">
   
-| [Desktop](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-vision-simulator/zacmq8kevy?form_factor=desktop) | [Mobile](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-vision-simulator/zacmq8kevy?form_factor=mobile) |
+| [Desktop](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-vision-simulator/h95zkagrsj?form_factor=desktop) | [Mobile](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-vision-simulator/h95zkagrsj?form_factor=mobile) |
 |-------|-------|
-| <kbd> ![image](desktop score image url) </kbd> | <kbd> ![image](mobile score image url) </kbd> |
+| <kbd> <img src="https://github.com/user-attachments/assets/12abd343-baf2-4084-bd9c-321ede83b09b" /> </kbd> | <kbd> <img src="https://github.com/user-attachments/assets/b16febe8-079e-439d-927f-b41524da92bd" /> </kbd> |
 
 </div>
 

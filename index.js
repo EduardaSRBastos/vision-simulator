@@ -138,12 +138,10 @@ buttonsContainer.addEventListener("click", (e) => {
 
   switch (buttonText) {
     case "Cat":
-      filteredLayer.style.filter =
-        "brightness(0.8) contrast(0.75) saturate(0.4) hue-rotate(15deg) sepia(0.3) blur(1px)";
+      filteredLayer.style.filter = "url(#cat)";
       break;
     case "Dog":
-      filteredLayer.style.filter =
-        "brightness(0.9) contrast(0.82) saturate(0.45) sepia(0.4) hue-rotate(45deg) blur(1.2px)";
+      filteredLayer.style.filter = "url(#dog)";
       break;
     case "Achromatopsia":
       filteredLayer.style.filter = "url(#achromatopsia)";
@@ -158,9 +156,7 @@ buttonsContainer.addEventListener("click", (e) => {
       filteredLayer.style.filter = "url(#tritanopia)";
       break;
     case "Astigmatism":
-      filteredLayer.style.filter = "blur(2px) contrast(1.1) saturate(0.9)";
-      filteredLayer.style.transform = "skewX(1.5deg) scaleX(1.02)";
-      filteredLayer.style.mixBlendMode = "overlay";
+      filteredLayer.style.filter = "url(#astigmatism)";
       break;
     case "Hyperopia":
       filteredLayer.style.filter = "blur(15px) brightness(1.05)";

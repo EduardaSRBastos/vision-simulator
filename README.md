@@ -1,77 +1,13 @@
 <div align="center">
   
-# Repository Template
-[![GitHub License](https://img.shields.io/github/license/EduardaSRBastos/repository-template?style=plastic&color=darkred)](https://github.com/EduardaSRBastos/repository-template?tab=MIT-1-ov-file)
-[![GitHub Release](https://img.shields.io/github/v/release/EduardaSRBastos/repository-template?style=plastic&color=orange)](https://github.com/EduardaSRBastos/repository-template/releases)
-[![GitHub repo size](https://img.shields.io/github/repo-size/EduardaSRBastos/repository-template?style=plastic)](https://github.com/EduardaSRBastos/repository-template)
+# Vision Simulator
+[![GitHub License](https://img.shields.io/github/license/EduardaSRBastos/vision-simulator?style=plastic&color=darkred)](https://github.com/EduardaSRBastos/vision-simulator?tab=MIT-1-ov-file)
+[![GitHub branch check runs](https://img.shields.io/github/check-runs/EduardaSRBastos/vision-simulator/main?style=plastic)](https://github.com/EduardaSRBastos/vision-simulator/actions)
+[![GitHub repo size](https://img.shields.io/github/repo-size/EduardaSRBastos/vision-simulator?style=plastic)](https://github.com/EduardaSRBastos/vision-simulator)
 
-<p><i>A structured GitHub template with essential resources for new projects.</i></p>
+<p><i>A vision simulator that recreates how humans and animals perceive the world through various visual conditions and color deficiencies.</i></p>
 
- </div>
-
-<br>
-
-## Table of Contents
-- [Features](#features)
-- [How to Use](#how-to-use)
-- [Contributing](#contributing)
-- [License](#license)
-- [README Template](#readme-template)
-
-<br>
-
-## Features
-
-This repository template includes the following essential resources for starting a new project:
-
-- **MIT License**: A standard open-source license.
-- **GitHub Actions**: Pre-configured GitHub Actions for automating workflows, such as the Update License Year Action.
-- **.gitignore**: A `.gitignore` file for standard project types.
-- **README.md Template**: A template for a clean, informative README with sections like features, how-to-use, contributing, and license information.
-- **Code of Conduct**: Pre-configured Code of Conduct for open-source projects.
-
-## How to Use
-
-1. **Create a new repository** from this template.
-   - Go to the repository page: [Repository Template](https://github.com/EduardaSRBastos/repository-template)
-   - Click the **"Use this template"** button to create your own repository with all of the resources included.
-   
-2. **Configure the repository**:
-   - Update the **README.md** file to reflect your project's details.
-   - Customize the **GitHub Actions** workflows if necessary.
-   - Update the **LICENSE** file with your preferred year or contributor information.
-
-3. **Add or modify workflows**:
-   - This template comes with the GitHub Actions workflow for updating the LICENSE year automatically. You can edit or add more workflows as needed.
-
-4. **Start your project**:
-   - Once your repository is set up, you can start adding your project's files, structure, and code.
-   - Contribute and invite others to help!
-
-## Contributing
-- Support this project by giving it a star ⭐. Thanks!
-- Feel free to suggest improvements or report any issues in the repository.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## README Template
-
-You can use the following template for your project README:
-
-```markdown
-
-<div align="center">
-  
-# Project Name
-[![GitHub License](https://img.shields.io/github/license/EduardaSRBastos/project-name?style=plastic&color=darkred)](https://github.com/EduardaSRBastos/project-name?tab=MIT-1-ov-file)
-[![GitHub Release](https://img.shields.io/github/v/release/EduardaSRBastos/project-name?style=plastic&color=orange)](https://github.com/EduardaSRBastos/repository-template/releases)
-[![GitHub branch check runs](https://img.shields.io/github/check-runs/EduardaSRBastos/project-name/main?style=plastic)](https://github.com/EduardaSRBastos/project-name/actions)
-[![GitHub repo size](https://img.shields.io/github/repo-size/EduardaSRBastos/project-name?style=plastic)](https://github.com/EduardaSRBastos/project-name)
-
-<p><i>A brief description of the project.</i></p>
-
-<kbd> ![image](printscreen-image-url) </kbd>
+<kbd> ![image](assets/images/preview.png) </kbd>
 
  </div>
 
@@ -88,24 +24,29 @@ You can use the following template for your project README:
 
 ## Features
 
-- **Feature 1**: Description of the Feature 1.
-- **Feature 2**: Description of the Feature 2.
-- **Feature 3**: Description of the Feature 3.
+- **Animal Vision Simulation**: Experience how cats and dogs perceive colors and light intensity.
+- **Color Vision Deficiencies**: Explore color blindness types including Deuteranopia, Protanopia, Tritanopia, and Achromatopsia.
+- **Eye Condition Simulation**: Visualize effects of Myopia, Hyperopia, and Astigmatism.
+- **Live Image Comparison**: Use a slider to compare normal vision with simulated vision in real-time.
+- **Local Image Upload**: Upload your own image (JPG/PNG) to test the filters — all processing happens locally.
+- **Privacy First**: No data or images are stored or transmitted.
 
 <br>
 
 ## How to Use
 
-1. **Step 1**: Description of the Step 1.
-2. **Step 2**: Description of the Step 2.
-3. **Step 3**: Description of the Step 3.
+1. **Upload an Image**: Click on “Upload an Image” and select a JPG or PNG file from your device.
+2. **Choose a Vision Type**: Select from available vision modes such as *Cat*, *Dog*, *Protanopia*, *Myopia*, etc.
+3. **Compare Views**: Drag the slider left or right to visually compare normal vision with the simulated one.
+4. **Switch Filters Instantly**: Click any other mode button to immediately view its effect.
+5. **Observe Differences**: Notice color shifts, blur levels, and brightness variations unique to each vision condition.
 
 <br>
 
 ## PageSpeed Insights Performance Score
 <div align="center">
   
-| [Desktop](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-project-name/zacmq8kevy?form_factor=desktop) | [Mobile](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-project-name/zacmq8kevy?form_factor=mobile) |
+| [Desktop](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-vision-simulator/zacmq8kevy?form_factor=desktop) | [Mobile](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-vision-simulator/zacmq8kevy?form_factor=mobile) |
 |-------|-------|
 | <kbd> ![image](desktop score image url) </kbd> | <kbd> ![image](mobile score image url) </kbd> |
 
@@ -117,6 +58,3 @@ You can use the following template for your project README:
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-

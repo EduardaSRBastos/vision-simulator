@@ -16,6 +16,7 @@
 ## Table of Contents
 - [Features](#features)
 - [How to Use](#how-to-use)
+- [Mockups](#mockups)
 - [Performance Score](#pagespeed-insights-performance-score)
 - [Contributing](#contributing)
 - [License](#license)
@@ -40,6 +41,14 @@
 3. **Compare Views**: Drag the slider left or right to visually compare normal vision with the simulated one.
 4. **Switch Filters Instantly**: Click any other mode button to immediately view its effect.
 5. **Observe Differences**: Notice color shifts, blur levels, and brightness variations unique to each vision condition.
+
+<br>
+
+## Mockups
+| Desktop | Mobile |
+|-------|-------|
+| <kbd> <img src="https://github.com/user-attachments/assets/1382fa30-67b7-494f-92b9-333ffa765565" /> </kbd> | <kbd> <img src="https://github.com/user-attachments/assets/f0949384-0b81-4525-8d76-fb40e2c78d91" /> </kbd> |
+
 
 <br>
 

@@ -275,3 +275,46 @@ footer {
   text-align: center;
   margin: 30px 0 15px 0;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  .buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-top: 20px;
+  }
+
+  .button-container {
+    width: 100px;
+    height: 90px;
+    font-size: 11px;
+  }
+
+  .upload-container {
+    width: 300px;
+    text-wrap: wrap;
+    word-wrap: break-word;
+  }
+
+  .notice {
+    text-align: center;
+  }
+
+  .image-container {
+    padding: 10px 20px 20px 20px;
+  }
+
+  .comparison-wrapper {
+    width: 300px;
+    height: 200px;
+  }
+
+  .upload-placeholder {
+    width: 260px;
+  }
+}

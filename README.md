@@ -45,7 +45,7 @@
 <br>
 
 ## Mockups
-| Desktop | Mobile |
+| [Desktop](https://design.penpot.app/#/view?file-id=ad92598f-af3a-817e-8006-48b5313729de&page-id=ad92598f-af3a-817e-8006-48b5313729df&section=interactions&index=1&interactions-mode=hide&share-id=02df3600-b175-80af-8007-0ec83b87fe18) | [Mobile](https://design.penpot.app/#/view?file-id=ad92598f-af3a-817e-8006-48b5313729de&page-id=ad92598f-af3a-817e-8006-48b5313729df&section=interactions&index=0&interactions-mode=hide&share-id=02df3600-b175-80af-8007-0ec83b87fe18) |
 |-------|-------|
 | <kbd> <img src="https://github.com/user-attachments/assets/1382fa30-67b7-494f-92b9-333ffa765565" /> </kbd> | <kbd> <img src="https://github.com/user-attachments/assets/f0949384-0b81-4525-8d76-fb40e2c78d91" /> </kbd> |
 
